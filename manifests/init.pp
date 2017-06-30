@@ -1,4 +1,5 @@
 class quagga (
+  String $hostname,
   Hash $global_opts,
   Hash $interfaces,
   Hash $prefix_lists,
@@ -42,7 +43,7 @@ class quagga (
     }
   }
 
-  quagga_global {$facts['networking']['fqdn']:
+  quagga_global {$hostname:
     * => $global_opts
   }
 

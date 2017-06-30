@@ -27,6 +27,7 @@ lookup_options:
   quagga::bgp::address_families:
     merge:
       strategy: deep
+quagga::hostname: "%{::facts.networking.fqdn}"
 quagga::global_opts: {}
 quagga::interfaces: {}
 quagga::prefix_lists: {}
